@@ -1,0 +1,7 @@
+<% if @number > 0 %>
+  <h1>Take one down!</h1>
+  <p><%= link_to 'Pass it around...', bottles_path(@number - 1) %></p>
+<% else %>
+  <h1>Go to the store!</h1>
+  <p><%= link_to 'Buy some more...', bottles_path(99) %></p>
+<% end %>

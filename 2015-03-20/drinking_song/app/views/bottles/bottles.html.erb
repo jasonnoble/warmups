@@ -1,0 +1,23 @@
+<% @number.times do |number| %>
+  <%= link_to image_tag('beer.jpg'), take_path(@number - 1) %>
+  <% if number % 10 == 9 %>
+    <br/>
+  <% end %>
+<% end %>
+<p/>
+<% if @number == 0 %>
+  No more bottles of beer on the wall...<br/>
+  No more bottles of beer.
+  <p/>
+
+  <%= link_to 'Go to the store...', take_path(@number - 1) %>
+<% else %>
+  <%= pluralize(@number, 'bottle') %> of beer on the wall...<br/>
+  <%= pluralize(@number, 'bottle') %> of beer.
+  <p/>
+
+  <%= link_to 'Take one down...', take_path(@number - 1) %>
+<% end %>
+
+
+

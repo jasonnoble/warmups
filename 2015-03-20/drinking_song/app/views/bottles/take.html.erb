@@ -1,0 +1,8 @@
+<% if @number >= 0 %>
+  <%= link_to image_tag('beer2.png'), bottles_path(@number) %>
+<% else %>
+
+  <%= link_to image_tag('beer3.jpg'), bottles_path(99) %>
+<% end %>
+
+

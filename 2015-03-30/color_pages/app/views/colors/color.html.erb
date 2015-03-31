@@ -1,0 +1,11 @@
+<h1>Colors#color</h1>
+<p>Find me in app/views/colors/color.html.erb</p>
+
+Pick a color:
+
+<%= form_tag show_color_path do %>
+  <%= select_tag :color,
+    options_for_select(@colors, @color) %>
+  <%= submit_tag 'Set Color' %>
+<% end %>
+

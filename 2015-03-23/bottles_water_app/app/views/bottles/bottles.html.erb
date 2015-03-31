@@ -1,0 +1,21 @@
+<% if @number == 0 %>
+  <h1>No more bottles of water on the wall</h1>
+  No more bottles of water.
+  <p/>
+  <%= link_to 'Go to the store...', take_path %>
+<% else %>
+  <h1><%= pluralize(@number, 'bottle') %> of water on the wall</h1>
+  <%= pluralize(@number, 'bottle') %> of water.
+  <p/>
+  <%= link_to 'Take one down...', take_path %>
+<% end %>
+<p />
+
+<% @number.times do |number| %>
+  <%= image_tag('bottled-water.jpg') %>
+  <% if number % 10 == 9 %>
+    <br/>
+  <% end %>
+<% end %>
+
+
